@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{ --fx-navy:#0B1B3A; --fx-red:#E5242A; --fx-gold:#FDC500; --fx-ink:#101418; }
+.font-sans{ font-family: var(--font-sans), ui-sans-serif, system-ui; }
+html,body{ height:100%; }
+.container{ @apply max-w-[1200px] mx-auto px-4 md:px-6; }
+.section{ @apply py-16 md:py-20; }
+
+.btn{ @apply inline-flex items-center gap-2 justify-center rounded-full px-5 py-3 text-sm font-semibold transition; }
+.btn-primary{ @apply bg-fx-red text-white shadow-[0_4px_12px_rgba(0,0,0,.12)] hover:shadow-[0_0_0_0_rgba(0,0,0,0),0_0_24px_rgba(229,36,42,.20)] active:opacity-90; }
+.btn-secondary{ @apply bg-white text-fx-navy border border-fx-navy/20 hover:bg-fx-navy hover:text-white; }
+
+.badge{ @apply inline-flex items-center rounded-full bg-fx-gold/15 text-fx-navy px-3 py-1 text-xs font-semibold; }
+.card{ @apply bg-white rounded-2xl shadow-[0_4px_12px_rgba(0,0,0,.12)] p-6; }
+
+.list-dot li{ @apply relative pl-7; }
+.list-dot li::before{ content:""; @apply absolute left-0 top-2 h-3 w-3 rounded-full bg-gradient-to-br from-fx-red to-fx-gold; box-shadow:0 0 0 3px rgba(229,36,42,.12); }
+
+.scroll-mt-24{ scroll-margin-top: 6rem; }
